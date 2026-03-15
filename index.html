@@ -787,26 +787,90 @@ footer {
 
 /* ── MOBILE ────────────────────────────────────── */
 @media (max-width: 860px) {
-  nav { padding: 0 24px; }
-  .container { padding: 0 24px; }
-  #home .hero-text { padding: 40px 24px; flex-direction: column; gap: 20px; }
-  #home .hero-sub { text-align: left; }
-  #home .hero-right-panel { padding: 48px 28px; }
-  #home .hero-right-panel a { margin: 0 !important; }
-  #home .intro-strip { grid-template-columns: 1fr; padding: 40px 24px; gap: 32px; }
-  #home .work-preview { padding: 48px 24px; }
-  .preview-grid, #work .work-grid, #designs .designs-grid { grid-template-columns: 1fr 1fr; }
-  #about .about-grid { grid-template-columns: 1fr; gap: 48px; }
+
+  /* ── NAV ── */
+  nav {
+    padding: 0 16px;
+    height: 52px;
+    flex-wrap: nowrap;
+    overflow: visible;
+  }
+  .nav-links { display: none !important; }
+  .nav-logo { font-size: 0.65rem; }
+
+  /* Keep Order a Piece button visible and properly sized on mobile */
+  a[style*="background:#8B6914"] {
+    font-size: 0.6rem !important;
+    padding: 8px 12px !important;
+    margin-left: 8px !important;
+    letter-spacing: 0.12em !important;
+  }
+
+  /* ── HOME HERO ── */
+  .hero-split {
+    grid-template-columns: 1fr !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+
+  /* Photo fills top portion */
+  .hero-split > div:first-child {
+    height: 60vw;
+    min-height: 260px;
+    max-height: 420px;
+  }
+
+  /* Right panel stacks below photo */
+  .hero-right-panel {
+    position: static !important;
+    height: auto !important;
+    max-height: none !important;
+    border-left: none !important;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    padding: 36px 24px !important;
+    overflow: visible !important;
+  }
+
+  .hero-right-panel h1 {
+    font-size: 1.6rem !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Panel links full width */
+  .home-panel-link {
+    padding: 14px 0 !important;
+  }
+
+  /* Order a piece button in panel — full bleed */
+  .hero-right-panel > div > a[style*="background:var(--brass)"],
+  .hero-right-panel > div > a[style*="background:#8B6914"] {
+    margin-left: -24px !important;
+    margin-right: -24px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  /* ── GENERAL ── */
+  .container { padding: 0 20px; }
+  #home .work-preview { padding: 40px 20px; }
+  .preview-grid { grid-template-columns: 1fr !important; }
+  #designs .work-grid { grid-template-columns: 1fr 1fr; }
+  #designs .designs-grid { grid-template-columns: 1fr; }
+  #about .about-grid { grid-template-columns: 1fr; gap: 40px; }
   #process .process-grid { grid-template-columns: 1fr; }
-  #process .process-note { grid-template-columns: 1fr; gap: 16px; }
-  #designs .commission { grid-template-columns: 1fr; padding: 48px 24px; gap: 48px; }
-  #contact .contact-grid { grid-template-columns: 1fr; gap: 56px; }
-  footer { flex-direction: column; gap: 10px; text-align: center; padding: 28px 24px; }
-  .hero-split { grid-template-columns: 1fr !important; }
-  .hero-split > div:first-child { min-height: 55vw; }
-  .hero-right-panel { border-left: none !important; border-top: 1px solid rgba(255,255,255,0.07); padding: 40px 24px !important; }
-  .hero-right-panel h1 { font-size: 1.8rem !important; }
-  .hero-right-panel a { width: calc(100% + 48px) !important; margin-left: -24px !important; margin-right: -24px !important; }
+  #process .process-note { grid-template-columns: 1fr; gap: 16px; padding: 32px 24px; }
+  #designs .commission { grid-template-columns: 1fr; padding: 40px 20px; gap: 40px; }
+  #contact .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+  footer { flex-direction: column; gap: 10px; text-align: center; padding: 28px 20px; }
+  .page-header { padding: 48px 0 32px; }
+  .page-title { font-size: 2rem; }
+}
+
+/* ── VERY SMALL SCREENS ── */
+@media (max-width: 480px) {
+  .hero-right-panel h1 { font-size: 1.4rem !important; }
+  #designs .work-grid { grid-template-columns: 1fr; }
 }
 
 
@@ -853,7 +917,8 @@ footer {
 
     <!-- Left: full-bleed image -->
     <div style="position:relative;overflow:hidden;background:#7A2E2E;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;color:#2A2A26;font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;min-height:calc(92vh - 60px);">
-      <img src="photos/Cherry_Wenge_Brass_Chest_of_Drawers.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6" width="48" height="48"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+      Replace with photograph
     </div>
 
     <!-- Right: statement panel -->
