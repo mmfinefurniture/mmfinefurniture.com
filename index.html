@@ -933,40 +933,37 @@ footer {
 <!-- ── HOME ─────────────────────────────────────── -->
 <div id="home" class="page active">
 
-  <!-- HERO: two-column split — large image left, statement right -->
-  <div class="hero-split" style="display:grid;grid-template-columns:1fr 480px;height:calc(92vh - 60px);max-height:800px;background:var(--nav-bg);overflow:hidden;">
+  <!-- HERO: full-width image with overlay text -->
+  <div style="position:relative;background:#7A2E2E;overflow:hidden;">
 
-    <!-- Left: full-bleed image -->
-    <div style="position:relative;overflow:hidden;background:#7A2E2E;min-height:calc(92vh - 60px);">
-      <img src="photos/Cherry_Wenge_Brass_Chest_of_Drawers.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    <!-- Full-width photo -->
+    <img src="photos/Cherry_Wenge_Brass_Chest_of_Drawers.jpg"
+      style="width:100%;height:75vh;max-height:700px;object-fit:cover;object-position:center top;display:block;">
+
+    <!-- Gradient overlay -->
+    <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(122,46,46,0.15) 0%, rgba(122,46,46,0.0) 50%, rgba(122,46,46,0.85) 100%);pointer-events:none;"></div>
+
+    <!-- Text overlay — bottom right -->
+    <div style="position:absolute;bottom:0;right:0;width:460px;padding:52px;display:flex;flex-direction:column;gap:0;">
+      <p style="font-size:0.75rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--brass);margin-bottom:24px;">Chapel Hill, NC</p>
+      <h1 style="font-family:'Lora',serif;font-weight:400;font-size:2.2rem;color:var(--white);line-height:1.1;letter-spacing:-0.01em;margin-bottom:24px;">
+        Custom built-ins,<br>architectural woodworking<br>
+        <em style="font-style:italic;color:rgba(250,250,248,0.55);">and fine furniture.</em>
+      </h1>
+      <p style="font-size:0.82rem;color:rgba(250,250,248,0.72);line-height:1.8;margin-bottom:32px;">
+        Designed, built, and finished in my Chapel Hill shop. From rough-sawn lumber. Built to order.
+      </p>
     </div>
+  </div>
 
-    <!-- Right: statement panel -->
-    <div class="hero-right-panel" style="display:flex;flex-direction:column;justify-content:space-between;padding:64px 52px;border-left:1px solid rgba(255,255,255,0.07);position:sticky;top:60px;height:calc(92vh - 60px);max-height:800px;overflow:hidden;">
-
-      <div>
-        <p style="font-size:0.75rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--brass);margin-bottom:40px;">Chapel Hill, NC</p>
-        <h1 style="font-family:'Lora',serif;font-weight:400;font-size:2.4rem;color:var(--white);line-height:1.15;letter-spacing:-0.01em;margin-bottom:32px;">
-          Custom built-ins,<br>
-          architectural<br>
-          woodworking<br>
-          <em style="font-style:italic;color:rgba(250,250,248,0.55);">and fine furniture.</em>
-        </h1>
-        <p style="font-size:0.85rem;color:rgba(250,250,248,0.72);line-height:1.9;max-width:300px;">
-          Everything designed, built, and finished in my Chapel Hill shop. From rough-sawn lumber. Built to order.
-        </p>
-      </div>
-
-      <div style="display:flex;flex-direction:column;gap:0;">
-        <a href="#" onclick="showPage('designs')" class="home-panel-link">Designs <span style="color:var(--brass);">→</span></a>
-        <a href="#" onclick="showPage('shop')" class="home-panel-link">Shop <span style="color:var(--brass);">→</span></a>
-        <a href="#" onclick="showPage('process')" class="home-panel-link">Process <span style="color:var(--brass);">→</span></a>
-        <a href="#" onclick="showPage('contact')" style="display:flex;justify-content:space-between;align-items:center;padding:18px 20px;margin:0 -20px;border-top:1px solid rgba(255,255,255,0.07);text-decoration:none;background:var(--brass);color:var(--black);font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">Order a piece <span>→</span></a>
-        <a href="#" onclick="showPage('about')" class="home-panel-link">About <span style="color:var(--brass);">→</span></a>
-        <a href="#" onclick="showPage('contact')" class="home-panel-link" style="border-bottom:1px solid rgba(255,255,255,0.07);">Let's talk <span style="color:var(--brass);">→</span></a>
-      </div>
-
-    </div>
+  <!-- NAV STRIP — below hero -->
+  <div style="background:var(--nav-bg);display:flex;flex-wrap:wrap;">
+    <a href="#" onclick="showPage('designs')" class="home-panel-link" style="flex:1;min-width:120px;padding:18px 24px;border-top:none;border-right:1px solid rgba(255,255,255,0.07);justify-content:center;">Designs <span style="color:var(--brass);">→</span></a>
+    <a href="#" onclick="showPage('shop')" class="home-panel-link" style="flex:1;min-width:120px;padding:18px 24px;border-top:none;border-right:1px solid rgba(255,255,255,0.07);justify-content:center;">Shop <span style="color:var(--brass);">→</span></a>
+    <a href="#" onclick="showPage('process')" class="home-panel-link" style="flex:1;min-width:120px;padding:18px 24px;border-top:none;border-right:1px solid rgba(255,255,255,0.07);justify-content:center;">Process <span style="color:var(--brass);">→</span></a>
+    <a href="#" onclick="showPage('contact')" style="flex:1;min-width:120px;display:flex;align-items:center;justify-content:center;gap:8px;padding:18px 24px;text-decoration:none;background:var(--brass);color:var(--black);font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;font-family:'DM Sans',sans-serif;border-right:1px solid rgba(255,255,255,0.07);" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">Order a piece →</a>
+    <a href="#" onclick="showPage('about')" class="home-panel-link" style="flex:1;min-width:120px;padding:18px 24px;border-top:none;border-right:1px solid rgba(255,255,255,0.07);justify-content:center;">About <span style="color:var(--brass);">→</span></a>
+    <a href="#" onclick="showPage('contact')" class="home-panel-link" style="flex:1;min-width:120px;padding:18px 24px;border-top:none;justify-content:center;">Let's talk <span style="color:var(--brass);">→</span></a>
   </div>
 
   <!-- WORK PREVIEW -->
