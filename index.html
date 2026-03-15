@@ -699,22 +699,23 @@ nav.home-nav .nav-order-btn {
 .form-field textarea,
 .form-field select {
   width: 100%;
-  background: transparent;
+  background: #EDEAE4;
   border: none;
-  border-bottom: 1px solid var(--rule);
-  padding: 10px 0;
+  border-bottom: 2px solid #C4C2BC;
+  padding: 12px 14px;
   font-family: 'DM Sans', sans-serif;
   font-size: 0.9rem;
   font-weight: 300;
   color: var(--black);
   outline: none;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, background 0.2s;
   -webkit-appearance: none;
+  border-radius: 0;
 }
 
 .form-field input:focus,
 .form-field textarea:focus,
-.form-field select:focus { border-bottom-color: var(--black); }
+.form-field select:focus { border-bottom-color: #7A2E2E; background: #E5E1D8; }
 
 .form-field textarea { resize: none; min-height: 80px; }
 
@@ -937,7 +938,7 @@ footer {
 
     <!-- Left: full-bleed image -->
     <div style="position:relative;overflow:hidden;background:#7A2E2E;min-height:calc(92vh - 60px);">
-      <img src="photos/Cherry_Wenge_Brass_Chest_of_Drawers.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <img src="photos/Cherry_Wenge_Brass_Chest_of_Drawers.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
     </div>
 
     <!-- Right: statement panel -->
@@ -1260,6 +1261,7 @@ footer {
     </div>
     <div class="contact-grid">
       <div>
+        <p style="font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:20px;">Get in touch</p>
         <p class="contact-intro">Tell me what you have in mind.</p>
         <div class="contact-facts">
           <div class="contact-fact"><strong>Location</strong><span>Chapel Hill, NC</span></div>
@@ -1269,6 +1271,7 @@ footer {
         </div>
       </div>
       <div>
+        <p style="font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid var(--rule);">Send a message</p>
         <div class="form-row">
           <div class="form-field"><label>First name</label><input type="text" placeholder="Jane"></div>
           <div class="form-field"><label>Last name</label><input type="text" placeholder="Smith"></div>
