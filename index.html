@@ -291,14 +291,16 @@ nav.home-nav .nav-order-btn {
 }
 
 /* ── WORK ──────────────────────────────────────── */
-#work .work-grid {
+#work .work-grid,
+#designs .work-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3px;
   margin-bottom: 2px;
 }
 
-#work .work-item {
+#work .work-item,
+#designs .work-item {
   cursor: pointer;
 }
 
@@ -1067,7 +1069,7 @@ footer {
 
       <div class="about-sidebar">
         <div class="sidebar-img">
-          <img src="photos/about.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;">
+          <img src="photos/about.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
         <div class="sidebar-facts">
           <div class="fact">
@@ -1499,8 +1501,10 @@ document.querySelectorAll('nav a, .see-all, .design-cta, .commission-cta').forEa
     const grid = document.getElementById('designs-portfolio-grid');
     if (!grid) return;
     grid.innerHTML = PORTFOLIO_ITEMS.map(item => `
-      <div class="work-item">
-        <div class="work-img">${imgHTML(item.img)}</div>
+      <div class="work-item" style="cursor:pointer;">
+        <div class="work-img" style="height:280px;background:#D8D4CC;overflow:hidden;display:flex;align-items:center;justify-content:center;">
+          ${item.img ? `<img src="${item.img}" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">` : PLACEHOLDER_SVG}
+        </div>
         <div class="work-caption">
           <p class="work-title-sm">${item.title}</p>
           <p class="work-meta">${item.meta}</p>
@@ -1512,13 +1516,14 @@ document.querySelectorAll('nav a, .see-all, .design-cta, .commission-cta').forEa
   function renderHomePreview() {
     const grid = document.getElementById('home-preview-grid');
     if (!grid) return;
-    // Take the 3 most recent (top of array = newest)
     const recent = PORTFOLIO_ITEMS.slice(0, 3);
     grid.innerHTML = recent.map(item => `
       <div class="preview-item" onclick="showPage('designs')" style="cursor:pointer;">
-        <div class="preview-img" style="height:360px;">${imgHTML(item.img)}</div>
+        <div class="preview-img" style="height:360px;background:#D8D4CC;overflow:hidden;display:flex;align-items:center;justify-content:center;">
+          ${item.img ? '<img src="' + item.img + '" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">' : PLACEHOLDER_SVG}
+        </div>
         <p class="preview-caption">${item.title}</p>
-        <p style="font-size:0.75rem;color:var(--muted);letter-spacing:0.06em;">${item.meta}</p>
+        <p style="font-size:0.75rem;color:var(--muted);letter-spacing:0.04em;">${item.meta}</p>
       </div>
     `).join('');
   }
