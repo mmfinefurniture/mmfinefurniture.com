@@ -302,8 +302,9 @@ nav.home-nav .nav-order-btn {
   cursor: pointer;
 }
 
-#work .work-img {
-  height: 340px;
+#work .work-img,
+#designs .work-grid .work-img {
+  height: 280px;
   background: #D8D4CC;
   overflow: hidden;
   display: flex;
@@ -313,7 +314,8 @@ nav.home-nav .nav-order-btn {
 
 #work .work-img svg { opacity: 0.2; }
 
-#work .work-img img {
+#work .work-img img,
+#designs .work-grid .work-img img {
   width: 100%; height: 100%;
   object-fit: cover;
   transition: transform 0.6s ease;
@@ -971,7 +973,7 @@ footer {
     <div style="position:relative;overflow:hidden;">
       <img src="photos/hero.jpg"
         style="width:100%;height:80vh;max-height:780px;min-height:300px;object-fit:cover;object-position:center 15%;display:block;">
-      <div style="position:absolute;inset:0;background:linear-gradient(to bottom, transparent 40%, rgba(122,46,46,0.6) 100%);pointer-events:none;"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(to bottom, transparent 55%, rgba(20,8,8,0.45) 100%);pointer-events:none;"></div>
     </div>
 
     <!-- Text block — below photo, always visible -->
@@ -1065,7 +1067,7 @@ footer {
 
       <div class="about-sidebar">
         <div class="sidebar-img">
-          <img src="photos/about.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <img src="photos/about.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;">
         </div>
         <div class="sidebar-facts">
           <div class="fact">
@@ -1232,10 +1234,7 @@ footer {
                   <p style="font-family:'Lora',serif;font-size:1.1rem;font-style:italic;color:var(--black);margin-bottom:4px;">Wine Cabinet</p>
                   <p style="font-size:0.75rem;color:var(--muted);">Hickory · hanging · stemware rack · carved back panel</p>
                 </div>
-                <div style="text-align:right;padding-left:20px;flex-shrink:0;">
-                  <span style="display:block;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:2px;">From</span>
-                  <span style="font-family:'Lora',serif;font-size:1.4rem;color:var(--black);">$1,800</span>
-                </div>
+
               </div>
               <a href="#" onclick="showPage('contact')" style="display:block;padding:13px 0;text-align:center;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);text-decoration:none;border:1px solid var(--rule);border-top:none;background:var(--white);transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='var(--nav-bg)';this.style.color='var(--white)'" onmouseout="this.style.background='var(--white)';this.style.color='var(--muted)'">Order this design</a>
             </div>
@@ -1250,10 +1249,7 @@ footer {
                   <p style="font-family:'Lora',serif;font-size:1.1rem;font-style:italic;color:var(--black);margin-bottom:4px;">Chest of Drawers</p>
                   <p style="font-size:0.75rem;color:var(--muted);">Maple, walnut · hand-cut dovetails</p>
                 </div>
-                <div style="text-align:right;padding-left:20px;flex-shrink:0;">
-                  <span style="display:block;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:2px;">From</span>
-                  <span style="font-family:'Lora',serif;font-size:1.4rem;color:var(--black);">$3,200</span>
-                </div>
+
               </div>
               <a href="#" onclick="showPage('contact')" style="display:block;padding:13px 0;text-align:center;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);text-decoration:none;border:1px solid var(--rule);border-top:none;background:var(--white);transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='var(--nav-bg)';this.style.color='var(--white)'" onmouseout="this.style.background='var(--white)';this.style.color='var(--muted)'">Order this design</a>
             </div>
@@ -1455,13 +1451,8 @@ document.querySelectorAll('nav a, .see-all, .design-cta, .commission-cta').forEa
   // img: path to your photo file, or "" to show placeholder.
   // title, meta: displayed under the photo.
   const PORTFOLIO_ITEMS = [
-    // To add a new piece: paste a new object at the TOP of this array (newest first).
-    // img: path to your photo file, or "" for placeholder.
-    {
-      img: "photos/bookcase.jpg",
-      title: "Full-wall built-in bookcase",
-      meta: "Poplar, milk paint · Pittsboro NC · 2026"
-    },
+    // To add a new piece: paste a new object at the TOP (newest first).
+    // img: path to photo, or "" for placeholder.
     {
       img: "photos/chest-wenge.jpg",
       title: "Chest of drawers",
@@ -1486,6 +1477,11 @@ document.querySelectorAll('nav a, .see-all, .design-cta, .commission-cta').forEa
       img: "photos/wainscoting.jpg",
       title: "Wainscoting, baseboard and chair rail",
       meta: "Cherry · Chapel Hill NC · 2023"
+    },
+    {
+      img: "photos/hero.jpg",
+      title: "Stair system",
+      meta: "Cherry, hand-planed railing · Chapel Hill NC · 2023"
     }
   ];
 
