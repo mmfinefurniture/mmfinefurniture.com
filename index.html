@@ -931,7 +931,7 @@ footer {
     grid-template-columns: repeat(3, 1fr) !important;
   }
   #home div[style*="padding:32px 52px"] { padding: 24px 20px 20px !important; }
-  #home img[style*="80vh"] { height: 55vh !important; max-height: 420px !important; }
+  #home img[style*="56vh"] { height: 40vh !important; max-height: 320px !important; }
 }
 </style>
 </head>
@@ -974,7 +974,7 @@ footer {
     <!-- Photo -->
     <div style="position:relative;overflow:hidden;">
       <img src="photos/hero.jpg"
-        style="width:100%;height:80vh;max-height:780px;min-height:300px;object-fit:cover;object-position:center 15%;display:block;">
+        style="width:100%;height:56vh;max-height:546px;min-height:260px;object-fit:cover;object-position:center 15%;display:block;">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom, transparent 55%, rgba(20,8,8,0.45) 100%);pointer-events:none;"></div>
     </div>
 
@@ -1007,32 +1007,8 @@ footer {
       <p class="section-label">Recent work</p>
       <a href="#" class="see-all" onclick="showPage('designs')">See all</a>
     </div>
-    <div class="preview-grid">
-
-      <div class="preview-item" onclick="showPage('designs')">
-        <div class="preview-img" style="height:360px;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" width="36" height="36"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-        </div>
-        <p class="preview-caption">Full-wall built-in bookcase</p>
-        <p style="font-size:0.75rem;color:var(--muted);letter-spacing:0.06em;">Poplar, milk paint · Pittsboro NC · 2026</p>
-      </div>
-
-      <div class="preview-item" onclick="showPage('designs')">
-        <div class="preview-img" style="height:360px;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" width="36" height="36"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-        </div>
-        <p class="preview-caption">Cherry ceiling</p>
-        <p style="font-size:0.75rem;color:var(--muted);letter-spacing:0.06em;">Cherry, cast-iron joist hangers · 2024</p>
-      </div>
-
-      <div class="preview-item" onclick="showPage('designs')">
-        <div class="preview-img" style="height:360px;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" width="36" height="36"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-        </div>
-        <p class="preview-caption">Stair system</p>
-        <p style="font-size:0.75rem;color:var(--muted);letter-spacing:0.06em;">Cherry treads, hand-planed railing · 2023</p>
-      </div>
-
+    <div class="preview-grid" id="home-preview-grid">
+      <!-- populated from PORTFOLIO_ITEMS — shows 3 most recent -->
     </div>
   </div>
 
