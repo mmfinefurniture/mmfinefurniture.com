@@ -1398,6 +1398,8 @@ footer {
           <div class="contact-fact"><strong>Lead time</strong><span>8 to 10 weeks from signed contract</span></div>
           <div class="contact-fact"><strong>Instagram</strong><span><a href="https://instagram.com/mmfinefurniture" style="color:var(--brass);text-decoration:none;">@mmfinefurniture</a></span></div>
           <div class="contact-fact"><strong>Response</strong><span>Within 48 hours</span></div>
+          <div class="contact-fact"><strong>Email</strong><span><a href="mailto:mehlenbacherfinefurniture@gmail.com" style="color:var(--brass);text-decoration:none;">mehlenbacherfinefurniture@gmail.com</a></span></div>
+          <div class="contact-fact"><strong>Phone</strong><span><a href="tel:+16032760712" style="color:var(--brass);text-decoration:none;">(603) 276-0712</a></span></div>
         </div>
       </div>
       <div>
@@ -1435,7 +1437,7 @@ footer {
 <footer>
   <p class="footer-logo">M.M. Fine Furniture</p>
   <p class="footer-mid">Custom built-ins, architectural woodworking and fine furniture</p>
-  <p class="footer-right">Chapel Hill, NC</p>
+  <p class="footer-right">Chapel Hill, NC &nbsp;·&nbsp; <a href="mailto:mehlenbacherfinefurniture@gmail.com" style="color:rgba(250,250,248,0.5);text-decoration:none;">mehlenbacherfinefurniture@gmail.com</a></p>
 </footer>
 
 <script>
@@ -1590,9 +1592,10 @@ document.querySelectorAll('nav a, .see-all, .design-cta, .commission-cta').forEa
     if (!grid) return;
     const recent = PORTFOLIO_ITEMS.slice(0, 3);
     grid.innerHTML = recent.map(item => `
-      <div class="preview-item" onclick="showPage('designs')" style="cursor:pointer;">
+      <div class="preview-item" style="cursor:${item.img ? 'zoom-in' : 'default'};"
+        onclick="${item.img ? 'openLightbox(\'' + item.img + '\')' : 'showPage(\'designs\')'}">
         <div class="preview-img" style="height:360px;background:#D8D4CC;overflow:hidden;display:flex;align-items:center;justify-content:center;">
-          ${item.img ? '<img src="' + item.img + '" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">' : PLACEHOLDER_SVG}
+          ${item.img ? '<img src="' + item.img + '" alt="" style="width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;">' : PLACEHOLDER_SVG}
         </div>
         <p class="preview-caption">${item.title}</p>
         <p style="font-size:0.75rem;color:var(--muted);letter-spacing:0.04em;">${item.meta}</p>
@@ -1697,7 +1700,8 @@ document.querySelectorAll('nav a, .see-all, .design-cta, .commission-cta').forEa
     document.body.style.overflow = 'hidden';
   }
   function closeLightbox() {
-    document.getElementById('lightbox').classList.remove('open');
+    const lb = document.getElementById('lightbox');
+    if (lb) lb.style.display = 'none';
     document.body.style.overflow = '';
   }
   document.addEventListener('keydown', e => {
@@ -1731,12 +1735,14 @@ document.querySelectorAll('nav a, .see-all, .design-cta, .commission-cta').forEa
   function openLightbox(src) {
     const lb = document.getElementById('lightbox');
     const img = document.getElementById('lightbox-img');
+    if (!lb || !img) return;
     img.src = src;
-    lb.classList.add('open');
+    lb.style.display = 'flex';
     document.body.style.overflow = 'hidden';
   }
   function closeLightbox() {
-    document.getElementById('lightbox').classList.remove('open');
+    const lb = document.getElementById('lightbox');
+    if (lb) lb.style.display = 'none';
     document.body.style.overflow = '';
   }
   document.addEventListener('keydown', function(e) {
@@ -1747,9 +1753,21 @@ document.querySelectorAll('nav a, .see-all, .design-cta, .commission-cta').forEa
 
   // Make all portfolio/work images clickable
   document.addEventListener('click', function(e) {
-    if (e.target.tagName === 'IMG' && !e.target.closest('#lightbox') && e.target.src) {
-      openLightbox(e.target.src);
+    const img = e.target;
+    if (img.tagName === 'IMG' && img.src && !img.closest('#lightbox')) {
+      e.preventDefault();
+      e.stopPropagation();
+      openLightbox(img.src);
     }
   });
 
 </script>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()" style="display:none;position:fixed;inset:0;background:rgba(8,8,7,0.92);z-index:1000;align-items:center;justify-content:center;cursor:zoom-out;">
+  <span id="lightbox-close" style="position:absolute;top:20px;right:28px;color:rgba(250,250,248,0.7);font-size:2rem;cursor:pointer;line-height:1;font-family:sans-serif;font-weight:300;">&#x2715;</span>
+  <img id="lightbox-img" src="" alt="" style="max-width:92vw;max-height:92vh;object-fit:contain;box-shadow:0 8px 48px rgba(0,0,0,0.6);">
+</div>
+
+</body>
+</html>
