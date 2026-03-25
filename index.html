@@ -1066,8 +1066,7 @@ footer {
     <div style="padding:32px 52px 28px;border-bottom:1px solid rgba(255,255,255,0.07);">
       <p style="font-size:0.72rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--brass);margin-bottom:16px;">Chapel Hill, NC</p>
       <h1 style="font-family:'Lora',serif;font-weight:400;font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--white);line-height:1.1;letter-spacing:-0.01em;margin-bottom:16px;">
-        Custom built-ins, architectural woodworking
-        <em style="font-style:italic;color:rgba(250,250,248,0.5);"> and fine furniture.</em>
+        Custom built-ins, architectural woodworking and fine furniture.
       </h1>
       <p style="font-size:0.85rem;color:rgba(250,250,248,0.65);line-height:1.8;">
         Designed, built, and finished in my Chapel Hill shop. From rough-sawn lumber. Built to order.
@@ -1302,7 +1301,7 @@ footer {
                 </div>
 
               </div>
-              <a href="#" onclick="showPage('contact')" style="display:block;padding:13px 0;text-align:center;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);text-decoration:none;border:1px solid var(--rule);border-top:none;background:var(--white);transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='var(--nav-bg)';this.style.color='var(--white)'" onmouseout="this.style.background='var(--white)';this.style.color='var(--muted)'">Order this design</a>
+              <a href="javascript:void(0)" onclick="showPage('contact')" style="display:block;padding:13px 0;text-align:center;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);text-decoration:none;border:1px solid var(--rule);border-top:none;background:var(--white);transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='var(--nav-bg)';this.style.color='var(--white)'" onmouseout="this.style.background='var(--white)';this.style.color='var(--muted)'">Order this design</a>
             </div>
 
             <div>
@@ -1317,7 +1316,7 @@ footer {
                 </div>
 
               </div>
-              <a href="#" onclick="showPage('contact')" style="display:block;padding:13px 0;text-align:center;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);text-decoration:none;border:1px solid var(--rule);border-top:none;background:var(--white);transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='var(--nav-bg)';this.style.color='var(--white)'" onmouseout="this.style.background='var(--white)';this.style.color='var(--muted)'">Order this design</a>
+              <a href="javascript:void(0)" onclick="showPage('contact')" style="display:block;padding:13px 0;text-align:center;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);text-decoration:none;border:1px solid var(--rule);border-top:none;background:var(--white);transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='var(--nav-bg)';this.style.color='var(--white)'" onmouseout="this.style.background='var(--white)';this.style.color='var(--muted)'">Order this design</a>
             </div>
 
           </div>
@@ -1460,8 +1459,9 @@ function showPage(id, pushState) {
 
 // Handle browser back/forward
 window.addEventListener('popstate', function(e) {
-  const id = (e.state && e.state.page) ? e.state.page : 'home';
-  showPage(id, false);
+  if (e.state && e.state.page) {
+    showPage(e.state.page, false);
+  }
 });
 
 // Set initial history state
