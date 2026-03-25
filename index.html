@@ -937,6 +937,84 @@ footer {
 @media (max-width: 860px) {
   .shop-designs-grid { grid-template-columns: 1fr !important; }
 }
+
+/* ── LIGHTBOX ─────────────────────────────────────────────────────── */
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(8,6,4,0.94);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+#lightbox.open { display: flex; }
+#lightbox img {
+  max-width: 92vw;
+  max-height: 92vh;
+  object-fit: contain;
+  box-shadow: 0 8px 64px rgba(0,0,0,0.7);
+}
+#lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  color: rgba(250,250,248,0.7);
+  font-size: 2rem;
+  font-weight: 300;
+  cursor: pointer;
+  line-height: 1;
+  font-family: sans-serif;
+  transition: color 0.2s;
+}
+#lightbox-close:hover { color: #FAFAF8; }
+.work-img img, .preview-img img, .design-img img { cursor: zoom-in; }
+
+#lightbox-caption {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(250,250,248,0.6);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-family: 'DM Sans', sans-serif;
+  white-space: nowrap;
+}
+
+/* ── LIGHTBOX ─────────────────────────────────────────────── */
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(8,8,7,0.92);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+#lightbox.open { display: flex; }
+#lightbox img {
+  max-width: 92vw;
+  max-height: 92vh;
+  object-fit: contain;
+  box-shadow: 0 8px 48px rgba(0,0,0,0.6);
+}
+#lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  color: rgba(250,250,248,0.7);
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  font-family: sans-serif;
+  font-weight: 300;
+  transition: color 0.2s;
+}
+#lightbox-close:hover { color: #FAFAF8; }
 </style>
 </head>
 <body>
@@ -1280,7 +1358,7 @@ footer {
           Most of what I make is built to order, not from inventory.
         </p>
         <p style="font-size:0.82rem;color:rgba(250,250,248,0.72);line-height:1.85;margin-bottom:28px;">
-          If you have a piece in mind, the Designs page shows what I build and what it costs. Commissions start with a conversation.
+          If you have a piece in mind, the Designs page shows what I build. Commissions start with a conversation.
         </p>
         <a href="#" onclick="showPage('designs')"
            style="display:block;padding:13px 0;text-align:center;font-size:0.75rem;
@@ -1359,15 +1437,27 @@ footer {
 </footer>
 
 <script>
-function showPage(id) {
+function showPage(id, pushState) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   document.querySelectorAll('.nav-links a').forEach(a => {
     a.classList.toggle('active', a.dataset.page === id);
   });
   window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (pushState !== false) {
+    try { history.pushState({ page: id }, '', '#' + id); } catch(e) {}
+  }
   return false;
 }
+
+// Handle browser back/forward
+window.addEventListener('popstate', function(e) {
+  const id = (e.state && e.state.page) ? e.state.page : 'home';
+  showPage(id, false);
+});
+
+// Set initial history state
+try { history.replaceState({ page: 'home' }, '', '#home'); } catch(e) {}
 
 // Prevent default on all nav links
 document.querySelectorAll('nav a, .see-all, .design-cta, .commission-cta').forEach(a => {
@@ -1595,4 +1685,71 @@ document.querySelectorAll('nav a, .see-all, .design-cta, .commission-cta').forEa
   }
   window.toggleMobileMenu = toggleMobileMenu;
   window.mobileNav = mobileNav;
+
+  // ── LIGHTBOX ──────────────────────────────────────────────────────────
+  function openLightbox(src, caption) {
+    const lb = document.getElementById('lightbox');
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox-caption').textContent = caption || '';
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+  window.openLightbox = openLightbox;
+  window.closeLightbox = closeLightbox;
+
+  // Make all portfolio/work images clickable
+  document.addEventListener('click', function(e) {
+    const img = e.target.closest('.work-img img, .preview-img img, .design-img img, .sidebar-img img, #lightbox img');
+    if (img && !img.closest('#lightbox')) {
+      e.stopPropagation();
+      const caption = img.closest('.work-item, .preview-item')
+        ?.querySelector('.work-title-sm, .preview-caption')?.textContent || '';
+      openLightbox(img.src, caption);
+    }
+  });
+
+  // Also wire up dynamically rendered portfolio images
+  function addLightboxToGrid(gridId) {
+    const grid = document.getElementById(gridId);
+    if (!grid) return;
+    grid.querySelectorAll('img').forEach(img => {
+      img.style.cursor = 'zoom-in';
+    });
+  }
+
+
+  // ── LIGHTBOX ──────────────────────────────────────────────────────────
+  function openLightbox(src) {
+    const lb = document.getElementById('lightbox');
+    const img = document.getElementById('lightbox-img');
+    img.src = src;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+  window.openLightbox = openLightbox;
+  window.closeLightbox = closeLightbox;
+
+  // Make all portfolio/work images clickable
+  document.addEventListener('click', function(e) {
+    const img = e.target.closest('.work-img img, .preview-img img, .design-img img, .sidebar-img img, #lightbox img');
+    if (img && !e.target.closest('#lightbox')) {
+      e.stopPropagation();
+      openLightbox(img.src);
+    }
+  });
+
 </script>
