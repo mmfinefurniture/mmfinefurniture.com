@@ -4,7 +4,60 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>M.M. Fine Furniture - Custom Built-Ins, Architectural Woodworking and Fine Furniture · Chapel Hill, NC</title>
+
+<meta name="description" content="Custom built-ins, architectural millwork and fine furniture, built from rough-sawn hardwood in a Chapel Hill, NC shop. Commission work by Matt Mehlenbacher.">
+<link rel="canonical" href="https://mmfinefurniture.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="M.M. Fine Furniture">
+<meta property="og:title" content="M.M. Fine Furniture — Custom Built-Ins &amp; Architectural Woodworking, Chapel Hill NC">
+<meta property="og:description" content="Custom built-ins, architectural millwork and fine furniture, built from rough-sawn hardwood in a Chapel Hill, NC shop.">
+<meta property="og:url" content="https://mmfinefurniture.com/">
+<meta property="og:image" content="https://mmfinefurniture.com/photos/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://mmfinefurniture.com/#business",
+  "name": "M.M. Fine Furniture",
+  "description": "Custom built-ins, architectural woodworking and fine furniture, designed and built from rough-sawn hardwood in Chapel Hill, North Carolina.",
+  "url": "https://mmfinefurniture.com/",
+  "telephone": "+1-603-276-0712",
+  "email": "mehlenbacherfinefurniture@gmail.com",
+  "image": "https://mmfinefurniture.com/photos/hero.jpg",
+  "priceRange": "$$$",
+  "founder": { "@type": "Person", "name": "Matt Mehlenbacher" },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Chapel Hill",
+    "addressRegion": "NC",
+    "postalCode": "27517",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Chapel Hill" },
+    { "@type": "City", "name": "Durham" },
+    { "@type": "City", "name": "Raleigh" },
+    { "@type": "City", "name": "Pittsboro" },
+    { "@type": "City", "name": "Carrboro" },
+    { "@type": "City", "name": "Hillsborough" }
+  ],
+  "knowsAbout": [
+    "Custom built-in bookcases",
+    "Architectural millwork",
+    "Coffered ceilings",
+    "Wainscoting and trim",
+    "Stair systems",
+    "Hand-cut dovetail casework"
+  ],
+  "sameAs": [ "https://instagram.com/mmfinefurniture" ]
+}
+</script>
+
 <style>
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -44,22 +97,6 @@ nav {
   height: 60px;
 }
 
-nav.home-nav .nav-links,
-nav.home-nav .nav-order-btn {
-  font-size: 0.72rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #080807 !important;
-  background: #C8960C !important;
-  padding: 9px 20px;
-  text-decoration: none !important;
-  margin-left: 20px;
-  transition: opacity 0.2s;
-  white-space: nowrap;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 400;
-  display: inline-block;
-}
 .nav-order-btn:hover { opacity: 0.85; color: #080807 !important; }
 .nav-order-btn:visited { color: #080807 !important; }
 .nav-order-btn:link { color: #080807 !important; }
@@ -120,107 +157,6 @@ nav.home-nav .nav-order-btn {
 }
 
 /* ── HOME ──────────────────────────────────────── */
-#home .hero {
-  height: calc(90vh - 60px);
-  background: var(--nav-bg);
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: flex-end;
-}
-
-#home .hero-placeholder {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 12px;
-  color: #3A3A36;
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-#home .hero-placeholder svg { opacity: 0.15; }
-
-#home .hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(122,46,46,0.88) 0%, transparent 55%);
-}
-
-#home .hero-text {
-  position: relative;
-  z-index: 2;
-  padding: 52px 48px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  width: 100%;
-}
-
-#home .hero-hl {
-  font-family: 'Lora', serif;
-  font-weight: 400;
-  font-size: clamp(2.4rem, 5vw, 4.5rem);
-  color: var(--white);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-}
-
-#home .hero-hl em {
-  font-style: italic;
-  color: rgba(250,250,248,0.72);
-}
-
-#home .hero-sub {
-  text-align: right;
-  padding-bottom: 6px;
-}
-
-#home .hero-sub p {
-  font-size: 0.74rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(250,250,248,0.72);
-  line-height: 2;
-}
-
-#home .hero-sub p:first-child {
-  color: rgba(250,250,248,0.85);
-}
-
-/* Home - intro strip */
-#home .intro-strip {
-  border-bottom: 1px solid var(--rule);
-  padding: 52px 48px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 48px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.intro-item {}
-
-.intro-label {
-  font-size: 0.72rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--brass);
-  margin-bottom: 10px;
-}
-
-.intro-text {
-  font-size: 0.88rem;
-  color: var(--mid);
-  line-height: 1.85;
-}
-
-/* Home - work preview */
 #home .work-preview {
   padding: 64px 48px;
   max-width: 1100px;
@@ -257,21 +193,16 @@ nav.home-nav .nav-order-btn {
   gap: 3px;
 }
 
-.preview-item {
-  cursor: pointer;
-  position: relative;
-}
+.preview-item { position: relative; }
 
 .preview-img {
-  height: 300px;
+  height: 360px;
   background: #D8D4CC;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.preview-img svg { opacity: 0.2; }
 
 .preview-img img {
   width: 100%; height: 100%;
@@ -291,8 +222,13 @@ nav.home-nav .nav-order-btn {
   color: var(--mid);
 }
 
-/* ── WORK ──────────────────────────────────────── */
-#work .work-grid,
+.preview-meta {
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+/* ── WORK / DESIGNS GRID ───────────────────────── */
 #designs .work-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -300,12 +236,6 @@ nav.home-nav .nav-order-btn {
   margin-bottom: 2px;
 }
 
-#work .work-item,
-#designs .work-item {
-  cursor: pointer;
-}
-
-#work .work-img,
 #designs .work-grid .work-img {
   height: 280px;
   background: #D8D4CC;
@@ -315,9 +245,6 @@ nav.home-nav .nav-order-btn {
   justify-content: center;
 }
 
-#work .work-img svg { opacity: 0.2; }
-
-#work .work-img img,
 #designs .work-grid .work-img img {
   width: 100%; height: 100%;
   object-fit: cover;
@@ -326,15 +253,15 @@ nav.home-nav .nav-order-btn {
   cursor: zoom-in;
 }
 
-#work .work-item:hover .work-img img { transform: scale(1.04); }
+#designs .work-item:hover .work-img img { transform: scale(1.04); }
 
-#work .work-caption {
+#designs .work-caption {
   padding: 14px 0 28px;
   border-bottom: 1px solid var(--rule);
   margin-bottom: 2px;
 }
 
-#work .work-title-sm {
+#designs .work-title-sm {
   font-size: 0.72rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -342,13 +269,13 @@ nav.home-nav .nav-order-btn {
   margin-bottom: 3px;
 }
 
-#work .work-meta {
+#designs .work-meta {
   font-size: 0.72rem;
   color: var(--muted);
   letter-spacing: 0.04em;
 }
 
-/* ── ABOUT / HELLO ─────────────────────────────── */
+/* ── ABOUT ─────────────────────────────────────── */
 #about .about-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -370,8 +297,6 @@ nav.home-nav .nav-order-btn {
   font-style: italic;
 }
 
-#about .about-sidebar {}
-
 #about .sidebar-img {
   height: 360px;
   background: #D8D4CC;
@@ -381,8 +306,6 @@ nav.home-nav .nav-order-btn {
   align-items: center;
   justify-content: center;
 }
-
-#about .sidebar-img svg { opacity: 0.2; }
 
 #about .sidebar-img img {
   width: 100%; height: 100%;
@@ -478,173 +401,6 @@ nav.home-nav .nav-order-btn {
   line-height: 1.85;
 }
 
-/* ── DESIGNS / SHOP ────────────────────────────── */
-#designs .designs-intro {
-  max-width: 640px;
-  margin-bottom: 56px;
-}
-
-#designs .designs-intro p {
-  font-size: 0.95rem;
-  color: var(--mid);
-  line-height: 1.9;
-}
-
-#designs .designs-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3px;
-  margin-bottom: 3px;
-}
-/* To add a new piece: copy one .design-card block and paste it inside .designs-grid.
-   Grid auto-wraps at 3 columns. No other changes needed. */
-
-#designs .design-card {}
-
-#designs .design-img {
-  height: 380px;
-  background: #D8D4CC;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.3s;
-}
-
-#designs .design-img svg { opacity: 0.2; }
-
-#designs .design-img img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-  display: block;
-}
-
-#designs .design-card:hover .design-img img { transform: scale(1.04); }
-
-#designs .design-info {
-  padding: 22px 0 28px;
-  border-bottom: 1px solid var(--rule);
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
-#designs .design-name {
-  font-family: 'Lora', serif;
-  font-size: 1.05rem;
-  font-weight: 400;
-  font-style: italic;
-  color: var(--black);
-  margin-bottom: 4px;
-}
-
-#designs .design-spec {
-  font-size: 0.72rem;
-  color: var(--muted);
-  letter-spacing: 0.06em;
-}
-
-#designs .design-price {
-  font-family: 'Lora', serif;
-  font-size: 1.1rem;
-  color: var(--black);
-  white-space: nowrap;
-  padding-left: 24px;
-}
-
-#designs .design-price span {
-  display: block;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 2px;
-  text-align: right;
-}
-
-#designs .design-cta {
-  display: block;
-  padding: 14px 0;
-  font-size: 0.72rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--muted);
-  text-decoration: none;
-  text-align: center;
-  border: 1px solid var(--rule);
-  border-top: none;
-  transition: background 0.2s, color 0.2s;
-  background: var(--white);
-}
-#designs .design-cta:hover {
-  background: var(--nav-bg);
-  color: var(--white);
-  border-color: var(--nav-bg);
-}
-
-/* Commission block */
-#designs .commission {
-  background: var(--nav-bg);
-  padding: 72px 64px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: start;
-  margin-top: 3px;
-}
-
-#designs .commission-left p {
-  font-family: 'Lora', serif;
-  font-size: clamp(1.5rem, 3vw, 2.4rem);
-  font-weight: 400;
-  color: var(--white);
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  margin-bottom: 24px;
-}
-
-#designs .commission-left p em {
-  font-style: italic;
-  color: rgba(250,250,248,0.35);
-}
-
-#designs .commission-left p + p {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.88rem;
-  font-weight: 300;
-  color: rgba(250,250,248,0.72);
-  line-height: 1.9;
-  letter-spacing: normal;
-}
-
-#designs .commission-facts {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-}
-
-#designs .cf {
-  padding-bottom: 28px;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-}
-#designs .cf:last-child { border-bottom: none; padding-bottom: 0; }
-
-#designs .cf-label {
-  font-size: 0.72rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--brass);
-  margin-bottom: 5px;
-}
-
-#designs .cf-value {
-  font-size: 0.85rem;
-  color: rgba(250,250,248,0.78);
-  line-height: 1.7;
-}
-
 /* ── CONTACT ───────────────────────────────────── */
 #contact .contact-grid {
   display: grid;
@@ -688,9 +444,7 @@ nav.home-nav .nav-order-btn {
 }
 
 /* Form */
-.form-field {
-  margin-bottom: 32px;
-}
+.form-field { margin-bottom: 32px; }
 
 .form-field label {
   display: block;
@@ -758,6 +512,7 @@ nav.home-nav .nav-order-btn {
 }
 
 .form-submit:hover { background: var(--brass); }
+.form-submit:disabled { opacity: 0.6; cursor: default; }
 
 /* ── FOOTER ────────────────────────────────────── */
 footer {
@@ -778,133 +533,14 @@ footer {
   font-weight: 400;
 }
 
-.footer-mid {
+.footer-mid, .footer-right {
   font-size: 0.72rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: rgba(250,250,248,0.6);
 }
 
-.footer-right {
-  font-size: 0.72rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: rgba(250,250,248,0.6);
-}
-
-/* ── MOBILE ────────────────────────────────────── */
-@media (max-width: 860px) {
-
-  /* ── NAV ── */
-  nav { padding: 0 16px; height: 52px; }
-  .nav-links { display: none !important; }
-  .nav-logo { font-size: 0.68rem; }
-  #nav-order-desktop { display: none !important; }
-  #hamburger { display: block !important; }
-
-  /* ── HOME HERO ── */
-  .hero-split {
-    grid-template-columns: 1fr !important;
-    height: auto !important;
-    max-height: none !important;
-  }
-
-  /* Photo fills top portion */
-  .hero-split > div:first-child {
-    height: 60vw;
-    min-height: 260px;
-    max-height: 420px;
-  }
-
-  /* Right panel stacks below photo */
-  .hero-right-panel {
-    position: static !important;
-    height: auto !important;
-    max-height: none !important;
-    border-left: none !important;
-    border-top: 1px solid rgba(255,255,255,0.07);
-    padding: 36px 24px !important;
-    overflow: visible !important;
-  }
-
-  .hero-right-panel h1 {
-    font-size: 1.6rem !important;
-    margin-bottom: 16px !important;
-  }
-
-  /* Panel links full width */
-  .home-panel-link {
-    padding: 14px 0 !important;
-  }
-
-  /* Order a piece button in panel - full bleed */
-  .hero-right-panel > div > a[style*="background:var(--brass)"],
-  .hero-right-panel > div > a[style*="background:#C8960C"] {
-    margin-left: -24px !important;
-    margin-right: -24px !important;
-    padding-left: 24px !important;
-    padding-right: 24px !important;
-  }
-
-  /* ── GENERAL ── */
-  .container { padding: 0 20px; }
-  #home .work-preview { padding: 40px 20px; }
-  .preview-grid { grid-template-columns: 1fr !important; }
-  #designs .work-grid { grid-template-columns: 1fr 1fr; }
-  #designs .designs-grid { grid-template-columns: 1fr; }
-  #about .about-grid { grid-template-columns: 1fr; gap: 40px; }
-  #process .process-grid { grid-template-columns: 1fr; }
-  #process .process-note { grid-template-columns: 1fr; gap: 16px; padding: 32px 24px; }
-  #designs .commission { grid-template-columns: 1fr; padding: 40px 20px; gap: 40px; }
-  #contact .contact-grid { grid-template-columns: 1fr; gap: 48px; }
-  .form-row { grid-template-columns: 1fr; gap: 0; }
-  footer { flex-direction: column; gap: 10px; text-align: center; padding: 28px 20px; }
-  #shop .container > div[style*="grid-template-columns:2fr"] { display: block !important; }
-  #shop .container > div[style*="grid-template-columns:2fr"] > div { margin-bottom: 32px; }
-  .page-header { padding: 48px 0 32px; }
-  .page-title { font-size: 2rem; }
-}
-
-/* ── VERY SMALL SCREENS ── */
-@media (max-width: 480px) {
-  .hero-right-panel h1 { font-size: 1.4rem !important; }
-  #designs .work-grid { grid-template-columns: 1fr; }
-}
-
-
-.home-panel-link {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 0;
-  border-top: 1px solid rgba(255,255,255,0.07);
-  text-decoration: none !important;
-  color: rgba(250,250,248,0.55) !important;
-  font-size: 0.74rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 300;
-  transition: color 0.2s;
-}
-.home-panel-link:hover,
-.home-panel-link:visited { color: rgba(250,250,248,0.55) !important; }
-.home-panel-link:hover { color: #FAFAF8 !important; }
-
-.mobile-menu-link {
-  display: block;
-  padding: 20px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  text-decoration: none !important;
-  color: rgba(250,250,248,0.85) !important;
-  font-size: 1.1rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 300;
-}
-.mobile-menu-link:visited { color: rgba(250,250,248,0.85) !important; }
-
+/* ── HOME PANEL / STRIP LINKS ──────────────────── */
 .home-strip-link {
   display: flex;
   align-items: center;
@@ -925,68 +561,21 @@ footer {
 .home-strip-link:hover { color: #FAFAF8 !important; background: rgba(255,255,255,0.05); }
 .home-strip-link:visited { color: rgba(250,250,248,0.65) !important; }
 
-@media (max-width: 860px) {
-  .home-strip-link { font-size: 0.65rem; letter-spacing: 0.08em; padding: 14px 4px; }
-}
-@media (max-width: 480px) {
-  #home div[style*="grid-template-columns:repeat(6"] {
-    grid-template-columns: repeat(3, 1fr) !important;
-  }
-  #home div[style*="padding:32px 52px"] { padding: 24px 20px 20px !important; }
-  #home img[style*="56vh"] { height: 40vh !important; max-height: 320px !important; }
-}
-
-@media (max-width: 860px) {
-  .shop-designs-grid { grid-template-columns: 1fr !important; }
-}
-
-/* ── LIGHTBOX ─────────────────────────────────────────────────────── */
-#lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(8,6,4,0.94);
-  z-index: 1000;
-  align-items: center;
-  justify-content: center;
-  cursor: zoom-out;
-}
-#lightbox.open { display: flex; }
-#lightbox img {
-  max-width: 92vw;
-  max-height: 92vh;
-  object-fit: contain;
-  box-shadow: 0 8px 64px rgba(0,0,0,0.7);
-}
-#lightbox-close {
-  position: absolute;
-  top: 20px;
-  right: 28px;
-  color: rgba(250,250,248,0.7);
-  font-size: 2rem;
-  font-weight: 300;
-  cursor: pointer;
-  line-height: 1;
-  font-family: sans-serif;
-  transition: color 0.2s;
-}
-#lightbox-close:hover { color: #FAFAF8; }
-.work-img img, .preview-img img, .design-img img { cursor: zoom-in; }
-
-#lightbox-caption {
-  position: absolute;
-  bottom: 28px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: rgba(250,250,248,0.6);
-  font-size: 0.78rem;
+.mobile-menu-link {
+  display: block;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  text-decoration: none !important;
+  color: rgba(250,250,248,0.85) !important;
+  font-size: 1.1rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-family: 'DM Sans', sans-serif;
-  white-space: nowrap;
+  font-weight: 300;
 }
+.mobile-menu-link:visited { color: rgba(250,250,248,0.85) !important; }
 
-/* ── LIGHTBOX ─────────────────────────────────────────────── */
+/* ── LIGHTBOX ──────────────────────────────────── */
 #lightbox {
   display: none;
   position: fixed;
@@ -1017,52 +606,98 @@ footer {
   transition: color 0.2s;
 }
 #lightbox-close:hover { color: #FAFAF8; }
+#lightbox-caption {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(250,250,248,0.6);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-family: 'DM Sans', sans-serif;
+  text-align: center;
+  max-width: 90vw;
+}
+
+/* ── MOBILE ────────────────────────────────────── */
+@media (max-width: 860px) {
+  nav { padding: 0 16px; height: 52px; }
+  .nav-links { display: none !important; }
+  .nav-logo { font-size: 0.68rem; }
+  #nav-order-desktop { display: none !important; }
+  #hamburger { display: block !important; }
+
+  .container { padding: 0 20px; }
+  #home .work-preview { padding: 40px 20px; }
+  .preview-grid { grid-template-columns: 1fr !important; }
+  #designs .work-grid { grid-template-columns: 1fr 1fr; }
+  #about .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  #process .process-grid { grid-template-columns: 1fr; }
+  #process .process-note { grid-template-columns: 1fr; gap: 16px; padding: 32px 24px; }
+  #contact .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+  footer { flex-direction: column; gap: 10px; text-align: center; padding: 28px 20px; }
+  #shop .container > div[style*="grid-template-columns:2fr"] { display: block !important; }
+  #shop .container > div[style*="grid-template-columns:2fr"] > div { margin-bottom: 32px; }
+  .page-header { padding: 48px 0 32px; }
+  .page-title { font-size: 2rem; }
+  .home-strip-link { font-size: 0.65rem; letter-spacing: 0.08em; padding: 14px 4px; }
+  .shop-designs-grid { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 480px) {
+  #designs .work-grid { grid-template-columns: 1fr; }
+  #home div[style*="grid-template-columns:repeat(6"] {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  #home div[style*="padding:32px 52px"] { padding: 24px 20px 20px !important; }
+  #home img[style*="56vh"] { height: 40vh !important; max-height: 320px !important; }
+}
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo" onclick="showPage('home')">M<span>.</span>M<span>.</span> Fine Furniture</a>
+  <a href="#home" class="nav-logo" onclick="return showPage('home')">M<span>.</span>M<span>.</span> Fine Furniture</a>
   <ul class="nav-links">
-    <li><a href="#" onclick="showPage('designs')" data-page="designs">Designs</a></li>
-    <li><a href="#" onclick="showPage('shop')" data-page="shop">Shop</a></li>
-    <li><a href="#" onclick="showPage('process')" data-page="process">Process</a></li>
-    <li><a href="#" onclick="showPage('about')" data-page="about">About</a></li>
-    <li><a href="#" onclick="showPage('contact')" data-page="contact">Let's Talk</a></li>
+    <li><a href="#designs" onclick="return showPage('designs')" data-page="designs">Designs</a></li>
+    <li><a href="#shop"    onclick="return showPage('shop')"    data-page="shop">Shop</a></li>
+    <li><a href="#process" onclick="return showPage('process')" data-page="process">Process</a></li>
+    <li><a href="#about"   onclick="return showPage('about')"   data-page="about">About</a></li>
+    <li><a href="#contact" onclick="return showPage('contact')" data-page="contact">Let's Talk</a></li>
   </ul>
-  <a href="#" onclick="showPage('contact')" id="nav-order-desktop" style="font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:#080807;background:#C8960C;padding:9px 20px;text-decoration:none;margin-left:20px;white-space:nowrap;font-family:'DM Sans',sans-serif;font-weight:400;display:inline-block;line-height:normal;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">Order a piece</a>
-  <button id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu" style="display:none;background:none;border:none;cursor:pointer;padding:8px;margin-left:12px;">
-    <span id="ham-icon" style="display:block;width:22px;height:2px;background:#FAFAF8;margin:4px 0;transition:all 0.2s;"></span>
-    <span style="display:block;width:22px;height:2px;background:#FAFAF8;margin:4px 0;transition:all 0.2s;"></span>
-    <span style="display:block;width:22px;height:2px;background:#FAFAF8;margin:4px 0;transition:all 0.2s;"></span>
+  <a href="#contact" onclick="return showPage('contact')" id="nav-order-desktop" class="nav-order-btn" style="font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:#080807;background:#C8960C;padding:9px 20px;text-decoration:none;margin-left:20px;white-space:nowrap;font-family:'DM Sans',sans-serif;font-weight:400;display:inline-block;line-height:normal;">Order a piece</a>
+  <button id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px;margin-left:12px;">
+    <span style="display:block;width:22px;height:2px;background:#FAFAF8;margin:4px 0;"></span>
+    <span style="display:block;width:22px;height:2px;background:#FAFAF8;margin:4px 0;"></span>
+    <span style="display:block;width:22px;height:2px;background:#FAFAF8;margin:4px 0;"></span>
   </button>
 </nav>
 
 <!-- Mobile menu overlay -->
 <div id="mobile-menu" style="display:none;position:fixed;top:52px;left:0;right:0;bottom:0;background:#7A2E2E;z-index:99;flex-direction:column;padding:40px 28px;gap:0;">
-  <a href="#" onclick="mobileNav('designs')"  class="mobile-menu-link">Designs</a>
-  <a href="#" onclick="mobileNav('shop')"     class="mobile-menu-link">Shop</a>
-  <a href="#" onclick="mobileNav('process')"  class="mobile-menu-link">Process</a>
-  <a href="#" onclick="mobileNav('about')"    class="mobile-menu-link">About</a>
-  <a href="#" onclick="mobileNav('contact')"  class="mobile-menu-link">Let's Talk</a>
-  <a href="#" onclick="mobileNav('contact')"  class="mobile-menu-link" style="background:#C8960C;color:#080807;margin-top:24px;padding:18px 24px;text-align:center;">Order a piece</a>
+  <a href="#designs" onclick="return mobileNav('designs')"  class="mobile-menu-link">Designs</a>
+  <a href="#shop"    onclick="return mobileNav('shop')"     class="mobile-menu-link">Shop</a>
+  <a href="#process" onclick="return mobileNav('process')"  class="mobile-menu-link">Process</a>
+  <a href="#about"   onclick="return mobileNav('about')"    class="mobile-menu-link">About</a>
+  <a href="#contact" onclick="return mobileNav('contact')"  class="mobile-menu-link">Let's Talk</a>
+  <a href="#contact" onclick="return mobileNav('contact')"  class="mobile-menu-link" style="background:#C8960C;color:#080807 !important;margin-top:24px;padding:18px 24px;text-align:center;">Order a piece</a>
 </div>
 
 <!-- ── HOME ─────────────────────────────────────── -->
 <div id="home" class="page active">
 
-  <!-- HERO -->
   <div style="background:var(--nav-bg);">
 
-    <!-- Photo -->
     <div style="position:relative;overflow:hidden;">
       <img src="photos/hero.jpg"
+        alt="Cherry stair system with hand-planed railing, built by M.M. Fine Furniture in Chapel Hill, NC"
         style="width:100%;height:56vh;max-height:546px;min-height:260px;object-fit:cover;object-position:center 15%;display:block;">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom, transparent 55%, rgba(20,8,8,0.45) 100%);pointer-events:none;"></div>
     </div>
 
-    <!-- Text block - below photo, always visible -->
     <div style="padding:32px 52px 28px;border-bottom:1px solid rgba(255,255,255,0.07);">
       <p style="font-size:0.72rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--brass);margin-bottom:16px;">Chapel Hill, NC</p>
       <h1 style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(1.9rem,4vw,3rem);color:var(--white);line-height:1.05;letter-spacing:0.02em;margin-bottom:16px;">
@@ -1072,41 +707,63 @@ footer {
         Designed, built, and finished in my Chapel Hill shop. From rough-sawn lumber. Built to order.
       </p>
       <div style="display:flex;gap:28px;margin-top:16px;flex-wrap:wrap;">
-        <a href="tel:+16032760712" style="font-size:0.78rem;color:rgba(250,250,248,0.55);text-decoration:none;letter-spacing:0.05em;transition:color 0.2s;" onmouseover="this.style.color='#FAFAF8'" onmouseout="this.style.color='rgba(250,250,248,0.55)'">(603) 276-0712</a>
-        <a href="mailto:mehlenbacherfinefurniture@gmail.com" style="font-size:0.78rem;color:rgba(250,250,248,0.55);text-decoration:none;letter-spacing:0.05em;transition:color 0.2s;" onmouseover="this.style.color='#FAFAF8'" onmouseout="this.style.color='rgba(250,250,248,0.55)'" >mehlenbacherfinefurniture@gmail.com</a>
+        <a href="tel:+16032760712" style="font-size:0.78rem;color:rgba(250,250,248,0.55);text-decoration:none;letter-spacing:0.05em;">(603) 276-0712</a>
+        <a href="mailto:mehlenbacherfinefurniture@gmail.com" style="font-size:0.78rem;color:rgba(250,250,248,0.55);text-decoration:none;letter-spacing:0.05em;">mehlenbacherfinefurniture@gmail.com</a>
       </div>
     </div>
 
-    <!-- Nav strip -->
     <div style="display:grid;grid-template-columns:repeat(6,1fr);">
-      <a href="#" onclick="showPage('designs')" class="home-strip-link">Designs</a>
-      <a href="#" onclick="showPage('shop')" class="home-strip-link">Shop</a>
-      <a href="#" onclick="showPage('process')" class="home-strip-link">Process</a>
-      <a href="#" onclick="showPage('contact')" class="home-strip-link" style="background:#C8960C;color:#111110 !important;font-weight:400;">Order a piece</a>
-      <a href="#" onclick="showPage('about')" class="home-strip-link">About</a>
-      <a href="#" onclick="showPage('contact')" class="home-strip-link">Let's talk</a>
+      <a href="#designs" onclick="return showPage('designs')" class="home-strip-link">Designs</a>
+      <a href="#shop"    onclick="return showPage('shop')"    class="home-strip-link">Shop</a>
+      <a href="#process" onclick="return showPage('process')" class="home-strip-link">Process</a>
+      <a href="#contact" onclick="return showPage('contact')" class="home-strip-link" style="background:#C8960C;color:#111110 !important;font-weight:400;">Order a piece</a>
+      <a href="#about"   onclick="return showPage('about')"   class="home-strip-link">About</a>
+      <a href="#contact" onclick="return showPage('contact')" class="home-strip-link">Let's talk</a>
     </div>
   </div>
 
-  <!-- WORK PREVIEW -->
+  <!-- WORK PREVIEW — static markup. Mirror the top 3 of the Designs grid. -->
   <div class="work-preview">
     <div class="section-label-row">
       <p class="section-label">Recent work</p>
-      <a href="#" class="see-all" onclick="showPage('designs')">See all</a>
+      <a href="#designs" class="see-all" onclick="return showPage('designs')">See all</a>
     </div>
-    <div class="preview-grid" id="home-preview-grid">
-      <!-- populated from PORTFOLIO_ITEMS - shows 3 most recent -->
+    <div class="preview-grid">
+
+      <div class="preview-item">
+        <div class="preview-img">
+          <img src="photos/chest-wenge.jpg" alt="Cherry and wenge chest of drawers with brass hardware, Chapel Hill NC" loading="lazy">
+        </div>
+        <p class="preview-caption">Chest of drawers</p>
+        <p class="preview-meta">Cherry, wenge, brass · Chapel Hill NC · 2025</p>
+      </div>
+
+      <div class="preview-item">
+        <div class="preview-img">
+          <img src="photos/display-cabinet.jpg" alt="Solid cherry display cabinet with glass doors, Chapel Hill NC" loading="lazy">
+        </div>
+        <p class="preview-caption">Display cabinet</p>
+        <p class="preview-meta">Cherry · Chapel Hill NC · 2025</p>
+      </div>
+
+      <div class="preview-item">
+        <div class="preview-img">
+          <img src="photos/desk-organizer.jpg" alt="Cherry, walnut and white oak desk with fitted organizer, Chapel Hill NC" loading="lazy">
+        </div>
+        <p class="preview-caption">Desk and organizer</p>
+        <p class="preview-meta">Cherry, walnut, white oak · Chapel Hill NC · 2025</p>
+      </div>
+
     </div>
   </div>
 
-  <!-- BOTTOM STRIP -->
   <div style="border-top:1px solid var(--rule);padding:36px 48px;display:flex;justify-content:flex-end;max-width:1100px;margin:0 auto;">
-    <a href="#" onclick="showPage('about')" style="font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--brass);text-decoration:none;">About me →</a>
+    <a href="#about" onclick="return showPage('about')" style="font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--brass);text-decoration:none;">About me →</a>
   </div>
 
 </div>
 
-<!-- ── ABOUT / HELLO ─────────────────────────────── -->
+<!-- ── ABOUT ─────────────────────────────────────── -->
 <div id="about" class="page">
   <div class="container">
     <div class="page-header">
@@ -1132,7 +789,7 @@ footer {
 
       <div class="about-sidebar">
         <div class="sidebar-img">
-          <img src="photos/about.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <img src="photos/about.jpg" alt="Matt Mehlenbacher in his Chapel Hill, NC woodworking shop" loading="lazy">
         </div>
         <div class="sidebar-facts">
           <div class="fact">
@@ -1145,7 +802,7 @@ footer {
           </div>
           <div class="fact">
             <p class="fact-label">Lead time</p>
-            <p class="fact-value">8 to 10 weeks from signed contract</p>
+            <p class="fact-value">10 to 12 weeks from signed contract</p>
           </div>
           <div class="fact">
             <p class="fact-label">Species</p>
@@ -1157,7 +814,7 @@ footer {
           </div>
           <div class="fact">
             <p class="fact-label">Instagram</p>
-            <p class="fact-value"><a href="https://instagram.com/mmfinefurniture" style="color:var(--brass);text-decoration:none;">@mmfinefurniture</a></p>
+            <p class="fact-value"><a href="https://instagram.com/mmfinefurniture" rel="noopener" style="color:var(--brass);text-decoration:none;">@mmfinefurniture</a></p>
           </div>
         </div>
       </div>
@@ -1201,13 +858,23 @@ footer {
       </div>
       <div class="process-step">
         <p class="step-num">03</p>
-        <h3 class="step-title">Fabrication and finishing</h3>
-        <p class="step-body">Everything is built and finished in the shop, from rough-sawn lumber to final topcoat. Cases are assembled, painted or oiled, and fully cured before they leave. Your house stays clean and the finish is consistent because it was done flat on a bench, not on a wall.</p>
+        <h3 class="step-title">Quote and deposit</h3>
+        <p class="step-body">Once the design, species and scope are settled I send a fixed quote and a simple contract. A 50% deposit starts the work and covers lumber, which I order early and let acclimate in the shop before anything is cut.</p>
       </div>
       <div class="process-step">
         <p class="step-num">04</p>
+        <h3 class="step-title">Fabrication and finishing</h3>
+        <p class="step-body">Everything is built and finished in the shop, from rough-sawn lumber to final topcoat. Cases are assembled, oiled or finished, and fully cured before they leave. Your house stays clean and the finish is consistent because it was done flat on a bench, not on a wall.</p>
+      </div>
+      <div class="process-step">
+        <p class="step-num">05</p>
         <h3 class="step-title">Delivery and install</h3>
-        <p class="step-body">Install day is carpentry only. No finishing chemicals, no fumes in your house. Cases get scribed, leveled, and fastened. Touch-ups are done before I leave.</p>
+        <p class="step-body">Install day is carpentry only. No finishing chemicals, no fumes in your house. Cases get scribed, leveled, and fastened. 40% of the balance is due on the first day of installation, before anything goes on the walls.</p>
+      </div>
+      <div class="process-step">
+        <p class="step-num">06</p>
+        <h3 class="step-title">Punch list</h3>
+        <p class="step-body">Touch-ups, adjustments and cleanup are done before I leave. The final 10% is due once you are satisfied and the punch list is closed out.</p>
       </div>
     </div>
 
@@ -1237,7 +904,7 @@ footer {
 
     <div class="process-note" style="margin-top:3px;">
       <p class="note-label">On timing</p>
-      <p class="note-text">Most work runs 8 to 10 weeks from signed contract depending on scope and current queue.</p>
+      <p class="note-text">Most work runs 10 to 12 weeks from signed contract depending on scope and current queue.</p>
     </div>
 
   </div>
@@ -1250,18 +917,80 @@ footer {
       <h1 class="page-title">Designs</h1>
     </div>
 
-    <!-- PORTFOLIO -->
     <div class="section-label-row" style="margin-bottom:28px;">
       <p class="section-label">Portfolio</p>
     </div>
-    <div class="work-grid" id="designs-portfolio-grid" style="margin-bottom:64px;">
-      <!-- populated by JS from PORTFOLIO_ITEMS -->
-    </div>
 
+    <!-- PORTFOLIO — static markup, newest first.
+         To add a piece: copy one .work-item block and paste it at the top.
+         Remember to mirror the top three into the home page preview grid. -->
+    <div class="work-grid" style="margin-bottom:64px;">
+
+      <div class="work-item">
+        <div class="work-img">
+          <img src="photos/chest-wenge.jpg" alt="Cherry and wenge chest of drawers with brass hardware, Chapel Hill NC" loading="lazy">
+        </div>
+        <div class="work-caption">
+          <p class="work-title-sm">Chest of drawers</p>
+          <p class="work-meta">Cherry, wenge, brass · Chapel Hill NC · 2025</p>
+        </div>
+      </div>
+
+      <div class="work-item">
+        <div class="work-img">
+          <img src="photos/display-cabinet.jpg" alt="Solid cherry display cabinet, Chapel Hill NC" loading="lazy">
+        </div>
+        <div class="work-caption">
+          <p class="work-title-sm">Display cabinet</p>
+          <p class="work-meta">Cherry · Chapel Hill NC · 2025</p>
+        </div>
+      </div>
+
+      <div class="work-item">
+        <div class="work-img">
+          <img src="photos/desk-organizer.jpg" alt="Cherry, walnut and white oak desk with fitted organizer, Chapel Hill NC" loading="lazy">
+        </div>
+        <div class="work-caption">
+          <p class="work-title-sm">Desk and organizer</p>
+          <p class="work-meta">Cherry, walnut, white oak · Chapel Hill NC · 2025</p>
+        </div>
+      </div>
+
+      <div class="work-item">
+        <div class="work-img">
+          <img src="photos/ceiling.jpg" alt="Cherry coffered ceiling with cast-iron joist hangers, Chapel Hill NC" loading="lazy">
+        </div>
+        <div class="work-caption">
+          <p class="work-title-sm">Coffered ceiling</p>
+          <p class="work-meta">Cherry, cast-iron joist hangers · Chapel Hill NC · 2024</p>
+        </div>
+      </div>
+
+      <div class="work-item">
+        <div class="work-img">
+          <img src="photos/wainscoting.jpg" alt="Cherry wainscoting, baseboard and chair rail millwork, Chapel Hill NC" loading="lazy">
+        </div>
+        <div class="work-caption">
+          <p class="work-title-sm">Wainscoting, baseboard and chair rail</p>
+          <p class="work-meta">Cherry · Chapel Hill NC · 2023</p>
+        </div>
+      </div>
+
+      <div class="work-item">
+        <div class="work-img">
+          <img src="photos/hero.jpg" alt="Cherry stair system with hand-planed railing, Chapel Hill NC" loading="lazy">
+        </div>
+        <div class="work-caption">
+          <p class="work-title-sm">Stair system</p>
+          <p class="work-meta">Cherry, hand-planed railing · Chapel Hill NC · 2023</p>
+        </div>
+      </div>
+
+    </div>
 
     <p style="font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);text-align:right;padding:24px 0;">
       More on Instagram,
-      <a href="https://instagram.com/mmfinefurniture" style="color:var(--brass);text-decoration:none;">@mmfinefurniture</a>
+      <a href="https://instagram.com/mmfinefurniture" rel="noopener" style="color:var(--brass);text-decoration:none;">@mmfinefurniture</a>
     </p>
 
   </div>
@@ -1284,14 +1013,13 @@ footer {
           These are pieces that came out of the shop between commissions, or sample pieces built to develop a new design. When something is available it will be listed here with photos, dimensions, species, and price. Right now the shop is focused on active commissions.
         </p>
 
-        <!-- BUILT TO ORDER DESIGNS -->
         <div style="margin-bottom:48px;">
           <p style="font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid var(--rule);">Built to order</p>
           <div class="shop-designs-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-bottom:3px;">
 
             <div>
               <div style="height:320px;background:#D8D4CC;overflow:hidden;">
-                <img src="photos/wine-cabinet.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+                <img src="photos/wine-cabinet.jpg" alt="Hanging hickory wine cabinet with stemware rack and carved back panel" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
               </div>
               <div style="padding:20px 0 16px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--rule);">
                 <div>
@@ -1299,14 +1027,13 @@ footer {
                   <p style="font-family:'Lora',serif;font-size:1.1rem;font-style:italic;color:var(--black);margin-bottom:4px;">Wine Cabinet</p>
                   <p style="font-size:0.75rem;color:var(--muted);">Hickory · hanging · stemware rack · carved back panel</p>
                 </div>
-
               </div>
-              <a href="javascript:void(0)" onclick="showPage('contact')" style="display:block;padding:13px 0;text-align:center;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);text-decoration:none;border:1px solid var(--rule);border-top:none;background:var(--white);transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='var(--nav-bg)';this.style.color='var(--white)'" onmouseout="this.style.background='var(--white)';this.style.color='var(--muted)'">Order this design</a>
+              <a href="#contact" onclick="return showPage('contact')" style="display:block;padding:13px 0;text-align:center;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);text-decoration:none;border:1px solid var(--rule);border-top:none;background:var(--white);">Order this design</a>
             </div>
 
             <div>
               <div style="height:320px;background:#D8D4CC;overflow:hidden;">
-                <img src="photos/chest.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+                <img src="photos/chest.jpg" alt="Maple and walnut chest of drawers with hand-cut dovetails" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
               </div>
               <div style="padding:20px 0 16px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--rule);">
                 <div>
@@ -1314,46 +1041,21 @@ footer {
                   <p style="font-family:'Lora',serif;font-size:1.1rem;font-style:italic;color:var(--black);margin-bottom:4px;">Chest of Drawers</p>
                   <p style="font-size:0.75rem;color:var(--muted);">Maple, walnut · hand-cut dovetails</p>
                 </div>
-
               </div>
-              <a href="javascript:void(0)" onclick="showPage('contact')" style="display:block;padding:13px 0;text-align:center;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);text-decoration:none;border:1px solid var(--rule);border-top:none;background:var(--white);transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='var(--nav-bg)';this.style.color='var(--white)'" onmouseout="this.style.background='var(--white)';this.style.color='var(--muted)'">Order this design</a>
+              <a href="#contact" onclick="return showPage('contact')" style="display:block;padding:13px 0;text-align:center;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);text-decoration:none;border:1px solid var(--rule);border-top:none;background:var(--white);">Order this design</a>
             </div>
 
           </div>
         </div>
 
-        <!-- Available pieces - duplicate this block when something is in stock -->
         <div style="border-top:1px solid var(--rule);padding:40px 0;text-align:center;">
           <p style="font-family:'Lora',serif;font-style:italic;font-size:1.3rem;color:var(--muted);margin-bottom:12px;">Nothing in stock right now.</p>
           <p style="font-size:0.78rem;color:var(--muted);letter-spacing:0.08em;margin-bottom:28px;">Check back or follow on Instagram for updates.</p>
-          <a href="https://instagram.com/mmfinefurniture"
+          <a href="https://instagram.com/mmfinefurniture" rel="noopener"
              style="font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--brass);text-decoration:none;">
             @mmfinefurniture →
           </a>
         </div>
-
-        <!--
-        TO ADD A PIECE FOR SALE - copy this block and fill in details:
-
-        <div style="border-top:1px solid var(--rule);padding:40px 0;display:grid;grid-template-columns:1fr 1fr;gap:40px;">
-          <div style="background:#D8D4CC;height:280px;display:flex;align-items:center;justify-content:center;">
-            <img src="your-photo.jpg" style="width:100%;height:100%;object-fit:cover;">
-          </div>
-          <div>
-            <p style="font-size:0.75rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--brass);margin-bottom:10px;">Available now</p>
-            <p style="font-family:'Lora',serif;font-size:1.4rem;font-weight:400;font-style:italic;color:var(--black);margin-bottom:8px;">Piece name here</p>
-            <p style="font-size:0.8rem;color:var(--mid);line-height:1.85;margin-bottom:20px;">
-              Species, dimensions, finish. Any notable details about this specific piece.
-            </p>
-            <p style="font-family:'Lora',serif;font-size:1.6rem;color:var(--black);margin-bottom:24px;">$0,000</p>
-            <a href="#" onclick="showPage('contact')"
-               style="display:inline-block;padding:13px 28px;background:var(--black);color:var(--white);
-               font-size:0.75rem;letter-spacing:0.22em;text-transform:uppercase;text-decoration:none;">
-              Inquire to purchase
-            </a>
-          </div>
-        </div>
-        -->
 
       </div>
 
@@ -1365,18 +1067,16 @@ footer {
         <p style="font-size:0.82rem;color:rgba(250,250,248,0.72);line-height:1.85;margin-bottom:28px;">
           If you have a piece in mind, the Designs page shows the style of build that I have historically completed. Commissions start with a conversation.
         </p>
-        <a href="#" onclick="showPage('designs')"
+        <a href="#designs" onclick="return showPage('designs')"
            style="display:block;padding:13px 0;text-align:center;font-size:0.75rem;
            letter-spacing:0.22em;text-transform:uppercase;color:var(--black);
-           background:var(--brass);text-decoration:none;margin-bottom:8px;transition:opacity 0.2s;"
-           onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+           background:var(--brass);text-decoration:none;margin-bottom:8px;">
           See designs
         </a>
-        <a href="#" onclick="showPage('contact')"
+        <a href="#contact" onclick="return showPage('contact')"
            style="display:block;padding:13px 0;text-align:center;font-size:0.75rem;
            letter-spacing:0.22em;text-transform:uppercase;color:rgba(250,250,248,0.72);
-           border:1px solid rgba(255,255,255,0.1);text-decoration:none;transition:color 0.2s;"
-           onmouseover="this.style.color='#FAFAF8'" onmouseout="this.style.color='rgba(250,250,248,0.72)'">
+           border:1px solid rgba(255,255,255,0.1);text-decoration:none;">
           Get in touch
         </a>
       </div>
@@ -1384,7 +1084,6 @@ footer {
     </div>
   </div>
 </div>
-
 
 <!-- ── CONTACT ────────────────────────────────────── -->
 <div id="contact" class="page">
@@ -1398,8 +1097,8 @@ footer {
         <p class="contact-intro">Tell me what you have in mind.</p>
         <div class="contact-facts">
           <div class="contact-fact"><strong>Location</strong><span>Chapel Hill, NC</span></div>
-          <div class="contact-fact"><strong>Lead time</strong><span>8 to 10 weeks from signed contract</span></div>
-          <div class="contact-fact"><strong>Instagram</strong><span><a href="https://instagram.com/mmfinefurniture" style="color:var(--brass);text-decoration:none;">@mmfinefurniture</a></span></div>
+          <div class="contact-fact"><strong>Lead time</strong><span>10 to 12 weeks from signed contract</span></div>
+          <div class="contact-fact"><strong>Instagram</strong><span><a href="https://instagram.com/mmfinefurniture" rel="noopener" style="color:var(--brass);text-decoration:none;">@mmfinefurniture</a></span></div>
           <div class="contact-fact"><strong>Response</strong><span>Within 48 hours</span></div>
           <div class="contact-fact"><strong>Email</strong><span><a href="mailto:mehlenbacherfinefurniture@gmail.com" style="color:var(--brass);text-decoration:none;">mehlenbacherfinefurniture@gmail.com</a></span></div>
           <div class="contact-fact"><strong>Phone</strong><span><a href="tel:+16032760712" style="color:var(--brass);text-decoration:none;">(603) 276-0712</a></span></div>
@@ -1408,13 +1107,13 @@ footer {
       <div>
         <p style="font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid var(--rule);">Send a message</p>
         <div class="form-row">
-          <div class="form-field"><label>First name</label><input type="text" placeholder="Jane"></div>
-          <div class="form-field"><label>Last name</label><input type="text" placeholder="Smith"></div>
+          <div class="form-field"><label for="f-first">First name</label><input id="f-first" type="text" placeholder="Jane" autocomplete="given-name"></div>
+          <div class="form-field"><label for="f-last">Last name</label><input id="f-last" type="text" placeholder="Smith" autocomplete="family-name"></div>
         </div>
-        <div class="form-field"><label>Email</label><input type="email" placeholder="jane@example.com"></div>
+        <div class="form-field"><label for="f-email">Email</label><input id="f-email" type="email" placeholder="jane@example.com" autocomplete="email"></div>
         <div class="form-field">
-          <label>What are you thinking about?</label>
-          <select>
+          <label for="f-project">What are you thinking about?</label>
+          <select id="f-project">
             <option value="" disabled selected>Select</option>
             <optgroup label="Commission">
               <option>Custom built-ins or architectural millwork</option>
@@ -1428,9 +1127,9 @@ footer {
             <option>Something available in the shop</option>
           </select>
         </div>
-        <div class="form-field"><label>Tell me about it</label><textarea placeholder="The space, what you are imagining, rough timeline."></textarea></div>
-        <button class="form-submit" id="contact-submit">Send</button>
-        <p id="form-status" style="font-size:0.75rem;margin-top:12px;display:none;"></p>
+        <div class="form-field"><label for="f-message">Tell me about it</label><textarea id="f-message" placeholder="The space, what you are imagining, rough timeline."></textarea></div>
+        <button class="form-submit" id="contact-submit" type="button">Send</button>
+        <p id="form-status" role="status" style="font-size:0.75rem;margin-top:12px;display:none;"></p>
       </div>
     </div>
   </div>
@@ -1443,335 +1142,185 @@ footer {
   <p class="footer-right">Chapel Hill, NC &nbsp;·&nbsp; <a href="mailto:mehlenbacherfinefurniture@gmail.com" style="color:rgba(250,250,248,0.5);text-decoration:none;">mehlenbacherfinefurniture@gmail.com</a></p>
 </footer>
 
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()">
+  <span id="lightbox-close" onclick="closeLightbox()" role="button" aria-label="Close">&#x2715;</span>
+  <img id="lightbox-img" src="" alt="">
+  <p id="lightbox-caption"></p>
+</div>
+
 <script>
-function showPage(id, pushState) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  document.querySelectorAll('.nav-links a').forEach(a => {
-    a.classList.toggle('active', a.dataset.page === id);
+(function () {
+  'use strict';
+
+  var VALID = ['home', 'designs', 'shop', 'process', 'about', 'contact'];
+
+  // ── PAGE ROUTING ───────────────────────────────────────────────
+  function showPage(id, pushState) {
+    if (VALID.indexOf(id) === -1) id = 'home';
+    var pages = document.querySelectorAll('.page');
+    for (var i = 0; i < pages.length; i++) pages[i].classList.remove('active');
+    var target = document.getElementById(id);
+    if (target) target.classList.add('active');
+
+    var links = document.querySelectorAll('.nav-links a');
+    for (var j = 0; j < links.length; j++) {
+      links[j].classList.toggle('active', links[j].dataset.page === id);
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    if (pushState !== false) {
+      try { history.pushState({ page: id }, '', '#' + id); } catch (e) {}
+    }
+    return false;
+  }
+
+  window.addEventListener('popstate', function (e) {
+    var id = (e.state && e.state.page) || (location.hash || '#home').slice(1);
+    showPage(id, false);
   });
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-  if (pushState !== false) {
-    try { history.pushState({ page: id }, '', '#' + id); } catch(e) {}
-  }
-  return false;
-}
 
-// Handle browser back/forward
-window.addEventListener('popstate', function(e) {
-  if (e.state && e.state.page) {
-    showPage(e.state.page, false);
-  }
-});
+  // Deep link on first load: mmfinefurniture.com/#process opens Process.
+  (function initialRoute() {
+    var id = (location.hash || '#home').slice(1);
+    if (VALID.indexOf(id) === -1) id = 'home';
+    showPage(id, false);
+    try { history.replaceState({ page: id }, '', '#' + id); } catch (e) {}
+  })();
 
-// Set initial history state
-try { history.replaceState({ page: 'home' }, '', '#home'); } catch(e) {}
-
-// Prevent default on all nav links
-document.querySelectorAll('nav a, .see-all, .design-cta, .commission-cta').forEach(a => {
-  a.addEventListener('click', e => e.preventDefault());
-});
-
+  // ── PROCESS TRACK TOGGLE ───────────────────────────────────────
   function setTrack(track) {
-    const bi = document.getElementById('track-builtin');
-    const fu = document.getElementById('track-furniture');
-    const tb = document.getElementById('toggle-builtin');
-    const tf = document.getElementById('toggle-furniture');
-    if (track === 'builtin') {
-      bi.style.display = 'grid';
-      fu.style.display = 'none';
-      tb.style.cssText = tb.style.cssText.replace('background:transparent', 'background:var(--black)').replace('color:var(--muted)', 'color:var(--white)');
-      tb.style.background = 'var(--black)';
-      tb.style.color = 'var(--white)';
-      tb.style.borderColor = 'var(--black)';
-      tf.style.background = 'transparent';
-      tf.style.color = 'var(--muted)';
-      tf.style.borderColor = 'var(--rule)';
-    } else {
-      bi.style.display = 'none';
-      fu.style.display = 'grid';
-      tf.style.background = 'var(--black)';
-      tf.style.color = 'var(--white)';
-      tf.style.borderColor = 'var(--black)';
-      tb.style.background = 'transparent';
-      tb.style.color = 'var(--muted)';
-      tb.style.borderColor = 'var(--rule)';
-    }
+    var bi = document.getElementById('track-builtin');
+    var fu = document.getElementById('track-furniture');
+    var tb = document.getElementById('toggle-builtin');
+    var tf = document.getElementById('toggle-furniture');
+    var on  = { background: 'var(--black)', color: 'var(--white)', borderColor: 'var(--black)' };
+    var off = { background: 'transparent',  color: 'var(--muted)', borderColor: 'var(--rule)' };
+    var showBuiltin = (track === 'builtin');
+    bi.style.display = showBuiltin ? 'grid' : 'none';
+    fu.style.display = showBuiltin ? 'none' : 'grid';
+    Object.assign(tb.style, showBuiltin ? on : off);
+    Object.assign(tf.style, showBuiltin ? off : on);
   }
 
-  function setTrack(track) {
-    const bi = document.getElementById('track-builtin');
-    const fu = document.getElementById('track-furniture');
-    const tb = document.getElementById('toggle-builtin');
-    const tf = document.getElementById('toggle-furniture');
-    if (track === 'builtin') {
-      bi.style.display = 'grid';
-      fu.style.display = 'none';
-      tb.style.cssText = tb.style.cssText.replace('background:transparent', 'background:var(--black)').replace('color:var(--muted)', 'color:var(--white)');
-      tb.style.background = 'var(--black)';
-      tb.style.color = 'var(--white)';
-      tb.style.borderColor = 'var(--black)';
-      tf.style.background = 'transparent';
-      tf.style.color = 'var(--muted)';
-      tf.style.borderColor = 'var(--rule)';
-    } else {
-      bi.style.display = 'none';
-      fu.style.display = 'grid';
-      tf.style.background = 'var(--black)';
-      tf.style.color = 'var(--white)';
-      tf.style.borderColor = 'var(--black)';
-      tb.style.background = 'transparent';
-      tb.style.color = 'var(--muted)';
-      tb.style.borderColor = 'var(--rule)';
-    }
+  // ── LIGHTBOX ───────────────────────────────────────────────────
+  // Only portfolio and shop imagery opens the lightbox. The hero and
+  // the About portrait deliberately do not.
+  var LIGHTBOX_SELECTOR = '.work-img img, .preview-img img, .shop-designs-grid img';
+
+  function openLightbox(src, caption) {
+    var lb  = document.getElementById('lightbox');
+    var img = document.getElementById('lightbox-img');
+    var cap = document.getElementById('lightbox-caption');
+    if (!lb || !img) return;
+    img.src = src;
+    img.alt = caption || '';
+    cap.textContent = caption || '';
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
   }
 
-  // ── PORTFOLIO ────────────────────────────────────────────────────────────
-  // To add a new piece: add an object to the TOP of this array (newest first).
-  // img: path to your photo file, or "" to show placeholder.
-  // title, meta: displayed under the photo.
-  const PORTFOLIO_ITEMS = [
-    // To add a new piece: paste a new object at the TOP (newest first).
-    // img: path to photo, or "" for placeholder.
-    {
-      img: "photos/chest-wenge.jpg",
-      title: "Chest of drawers",
-      meta: "Cherry, wenge, brass · Chapel Hill NC · 2025"
-    },
-    {
-      img: "photos/display-cabinet.jpg",
-      title: "Display cabinet",
-      meta: "Cherry · Chapel Hill NC · 2025"
-    },
-    {
-      img: "photos/desk-organizer.jpg",
-      title: "Desk and organizer",
-      meta: "Cherry, walnut, white oak · Chapel Hill NC · 2025"
-    },
-    {
-      img: "photos/ceiling.jpg",
-      title: "Coffered ceiling",
-      meta: "Cherry, cast-iron joist hangers · Chapel Hill NC · 2024"
-    },
-    {
-      img: "photos/wainscoting.jpg",
-      title: "Wainscoting, baseboard and chair rail",
-      meta: "Cherry · Chapel Hill NC · 2023"
-    },
-    {
-      img: "photos/hero.jpg",
-      title: "Stair system",
-      meta: "Cherry, hand-planed railing · Chapel Hill NC · 2023"
-    }
-  ];
-
-  const PLACEHOLDER_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" width="36" height="36"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>`;
-
-  function imgHTML(src, extraStyle) {
-    const style = extraStyle || '';
-    if (src) {
-      return `<img src="${src}" alt="" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;">`;
-    }
-    return PLACEHOLDER_SVG;
+  function closeLightbox() {
+    var lb = document.getElementById('lightbox');
+    if (lb) lb.classList.remove('open');
+    document.body.style.overflow = '';
   }
 
-  function renderDesignsGrid() {
-    const grid = document.getElementById('designs-portfolio-grid');
-    if (!grid) return;
-    grid.innerHTML = PORTFOLIO_ITEMS.map(item => `
-      <div class="work-item" style="cursor:pointer;">
-        <div class="work-img" style="height:280px;background:#D8D4CC;overflow:hidden;display:flex;align-items:center;justify-content:center;">
-          ${item.img ? `<img src="${item.img}" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">` : PLACEHOLDER_SVG}
-        </div>
-        <div class="work-caption">
-          <p class="work-title-sm">${item.title}</p>
-          <p class="work-meta">${item.meta}</p>
-        </div>
-      </div>
-    `).join('');
+  document.addEventListener('click', function (e) {
+    var img = e.target.closest ? e.target.closest(LIGHTBOX_SELECTOR) : null;
+    if (!img || img.closest('#lightbox')) return;
+    e.preventDefault();
+    var item = img.closest('.work-item, .preview-item');
+    var label = item ? item.querySelector('.work-title-sm, .preview-caption') : null;
+    openLightbox(img.currentSrc || img.src, label ? label.textContent : (img.alt || ''));
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  // ── MOBILE MENU ────────────────────────────────────────────────
+  function toggleMobileMenu() {
+    var menu = document.getElementById('mobile-menu');
+    var btn  = document.getElementById('hamburger');
+    var open = menu.style.display === 'flex';
+    menu.style.display = open ? 'none' : 'flex';
+    if (btn) btn.setAttribute('aria-expanded', String(!open));
   }
 
-  function renderHomePreview() {
-    const grid = document.getElementById('home-preview-grid');
-    if (!grid) return;
-    const recent = PORTFOLIO_ITEMS.slice(0, 3);
-    grid.innerHTML = recent.map(item => `
-      <div class="preview-item" style="cursor:${item.img ? 'zoom-in' : 'default'};"
-        onclick="${item.img ? 'openLightbox(\'' + item.img + '\')' : 'showPage(\'designs\')'}">
-        <div class="preview-img" style="height:360px;background:#D8D4CC;overflow:hidden;display:flex;align-items:center;justify-content:center;">
-          ${item.img ? '<img src="' + item.img + '" alt="" style="width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;">' : PLACEHOLDER_SVG}
-        </div>
-        <p class="preview-caption">${item.title}</p>
-        <p style="font-size:0.75rem;color:var(--muted);letter-spacing:0.04em;">${item.meta}</p>
-      </div>
-    `).join('');
+  function mobileNav(page) {
+    var menu = document.getElementById('mobile-menu');
+    var btn  = document.getElementById('hamburger');
+    menu.style.display = 'none';
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+    showPage(page);
+    return false;
   }
 
-  // Render on load
-  renderDesignsGrid();
-  renderHomePreview();
-
-  // Re-render when switching to designs page so it's always fresh
-  const _origShowPage = showPage;
-  showPage = function(id) {
-    _origShowPage(id);
-    if (id === 'designs') renderDesignsGrid();
-    if (id === 'home') renderHomePreview();
-  };
-
-
-  // ── CONTACT FORM ─────────────────────────────────────────────────────────
-  document.addEventListener('click', function(e) {
-    if (e.target && e.target.id === 'contact-submit') {
+  // ── CONTACT FORM ───────────────────────────────────────────────
+  var submitBtn = document.getElementById('contact-submit');
+  if (submitBtn) {
+    submitBtn.addEventListener('click', function (e) {
       e.preventDefault();
-      const status = document.getElementById('form-status');
-      const btn = document.getElementById('contact-submit');
+      var status = document.getElementById('form-status');
+      var email  = document.getElementById('f-email');
 
-      const fields = {
-        firstName: document.querySelector('#contact input[placeholder="Jane"]'),
-        lastName:  document.querySelector('#contact input[placeholder="Smith"]'),
-        email:     document.querySelector('#contact input[type="email"]'),
-        project:   document.querySelector('#contact select'),
-        message:   document.querySelector('#contact textarea'),
-      };
-
-      // Basic validation
-      if (!fields.email || !fields.email.value.trim()) {
-        status.textContent = 'Please enter your email address.';
+      function say(msg, colour) {
+        status.textContent = msg;
+        status.style.color = colour;
         status.style.display = 'block';
-        status.style.color = '#8B3A3A';
+      }
+
+      var value = email ? email.value.trim() : '';
+      if (!value || value.indexOf('@') === -1) {
+        say('Please enter a valid email address.', '#8B3A3A');
         return;
       }
 
-      btn.textContent = 'Sending...';
-      btn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
 
-      const data = {
-        name: (fields.firstName ? fields.firstName.value : '') + ' ' + (fields.lastName ? fields.lastName.value : ''),
-        email: fields.email ? fields.email.value : '',
-        project: fields.project ? fields.project.value : '',
-        message: fields.message ? fields.message.value : '',
+      var payload = {
+        name: (document.getElementById('f-first').value + ' ' +
+               document.getElementById('f-last').value).trim(),
+        email: value,
+        project: document.getElementById('f-project').value,
+        message: document.getElementById('f-message').value
       };
 
       fetch('https://formspree.io/f/mnjgbror', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(data)
+        body: JSON.stringify(payload)
       })
-      .then(r => r.json())
-      .then(data => {
-        if (data.ok) {
-          status.textContent = 'Message sent. I will be in touch within 48 hours.';
-          status.style.color = 'var(--brass)';
-          status.style.display = 'block';
-          btn.textContent = 'Sent';
-          // Clear fields
-          Object.values(fields).forEach(f => { if (f) f.value = ''; });
-        } else {
-          throw new Error('Form error');
-        }
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (!data.ok) throw new Error('Form error');
+        say('Message sent. I will be in touch within 48 hours.', 'var(--brass)');
+        submitBtn.textContent = 'Sent';
+        ['f-first', 'f-last', 'f-email', 'f-message'].forEach(function (id) {
+          document.getElementById(id).value = '';
+        });
+        document.getElementById('f-project').selectedIndex = 0;
       })
-      .catch(() => {
-        status.textContent = 'Something went wrong. Email me directly at mmfinefurniture.com';
-        status.style.color = '#8B3A3A';
-        status.style.display = 'block';
-        btn.textContent = 'Send';
-        btn.disabled = false;
+      .catch(function () {
+        say('Something went wrong. Please email mehlenbacherfinefurniture@gmail.com directly.', '#8B3A3A');
+        submitBtn.textContent = 'Send';
+        submitBtn.disabled = false;
       });
-    }
-  });
-
-
-  function toggleMobileMenu() {
-    const menu = document.getElementById('mobile-menu');
-    const isOpen = menu.style.display === 'flex';
-    menu.style.display = isOpen ? 'none' : 'flex';
-  }
-
-  function mobileNav(page) {
-    document.getElementById('mobile-menu').style.display = 'none';
-    showPage(page);
-  }
-  window.toggleMobileMenu = toggleMobileMenu;
-  window.mobileNav = mobileNav;
-
-  // ── LIGHTBOX ──────────────────────────────────────────────────────────
-  function openLightbox(src, caption) {
-    const lb = document.getElementById('lightbox');
-    document.getElementById('lightbox-img').src = src;
-    document.getElementById('lightbox-caption').textContent = caption || '';
-    lb.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeLightbox() {
-    const lb = document.getElementById('lightbox');
-    if (lb) lb.style.display = 'none';
-    document.body.style.overflow = '';
-  }
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeLightbox();
-  });
-  window.openLightbox = openLightbox;
-  window.closeLightbox = closeLightbox;
-
-  // Make all portfolio/work images clickable
-  document.addEventListener('click', function(e) {
-    const img = e.target.closest('.work-img img, .preview-img img, .design-img img, .sidebar-img img, #lightbox img');
-    if (img && !img.closest('#lightbox')) {
-      e.stopPropagation();
-      const caption = img.closest('.work-item, .preview-item')
-        ?.querySelector('.work-title-sm, .preview-caption')?.textContent || '';
-      openLightbox(img.src, caption);
-    }
-  });
-
-  // Also wire up dynamically rendered portfolio images
-  function addLightboxToGrid(gridId) {
-    const grid = document.getElementById(gridId);
-    if (!grid) return;
-    grid.querySelectorAll('img').forEach(img => {
-      img.style.cursor = 'zoom-in';
     });
   }
 
-
-  // ── LIGHTBOX ──────────────────────────────────────────────────────────
-  function openLightbox(src) {
-    const lb = document.getElementById('lightbox');
-    const img = document.getElementById('lightbox-img');
-    if (!lb || !img) return;
-    img.src = src;
-    lb.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-  }
-  function closeLightbox() {
-    const lb = document.getElementById('lightbox');
-    if (lb) lb.style.display = 'none';
-    document.body.style.overflow = '';
-  }
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeLightbox();
-  });
+  // Expose the handlers used by inline onclick attributes.
+  window.showPage = showPage;
+  window.setTrack = setTrack;
   window.openLightbox = openLightbox;
   window.closeLightbox = closeLightbox;
-
-  // Make all portfolio/work images clickable
-  document.addEventListener('click', function(e) {
-    const img = e.target;
-    if (img.tagName === 'IMG' && img.src && !img.closest('#lightbox')) {
-      e.preventDefault();
-      e.stopPropagation();
-      openLightbox(img.src);
-    }
-  });
-
+  window.toggleMobileMenu = toggleMobileMenu;
+  window.mobileNav = mobileNav;
+})();
 </script>
-
-<!-- LIGHTBOX -->
-<div id="lightbox" onclick="closeLightbox()" style="display:none;position:fixed;inset:0;background:rgba(8,8,7,0.92);z-index:1000;align-items:center;justify-content:center;cursor:zoom-out;">
-  <span id="lightbox-close" style="position:absolute;top:20px;right:28px;color:rgba(250,250,248,0.7);font-size:2rem;cursor:pointer;line-height:1;font-family:sans-serif;font-weight:300;">&#x2715;</span>
-  <img id="lightbox-img" src="" alt="" style="max-width:92vw;max-height:92vh;object-fit:contain;box-shadow:0 8px 48px rgba(0,0,0,0.6);">
-</div>
 
 </body>
 </html>
